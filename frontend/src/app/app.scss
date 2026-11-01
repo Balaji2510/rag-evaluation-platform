@@ -1,0 +1,37 @@
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #020617;
+  color: #f8fafc;
+}
+
+.layout-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+  height: calc(100vh - 64px);
+  box-sizing: border-box;
+}
+
+.main-content.full-width {
+  padding: 0;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .layout-body {
+    flex-direction: column;
+  }
+
+  .main-content {
+    padding: 1rem;
+    height: auto;
+  }
+}
